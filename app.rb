@@ -21,6 +21,10 @@ enable :sessions
   end 
 
   get '/attack' do
+    @player_1 = session[:player_1]
+    @player_2 = session[:player_2]
+    p @player_1
+    p @player_2
     erb :attack
   end
 
