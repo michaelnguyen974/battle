@@ -1,5 +1,5 @@
 require 'capybara/rspec'
-require '/Users/michaelnguyen/Makers/week_3/Battle/app.rb'
+require './app.rb'
 Capybara.app = Battle
 
 # feature "show testing infrastructure working!!!" do 
@@ -12,9 +12,10 @@ Capybara.app = Battle
 feature "Enter names for TEKKEN" do 
   scenario "tests for filling in forms with names" do
   visit("/")
-  fill_in :player_1_name, with: "Jin"
-  fill_in :player_2_name, with: "Kazuya"
+  fill_in :player_1, with: "Jin"
+  fill_in :player_2, with: "Kazuya"
   click_button 'Submit'
   expect(page).to have_content 'Jin vs Kazuya'
   end 
 end 
+
