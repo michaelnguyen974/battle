@@ -8,5 +8,6 @@ feature "Hitpoints" do
   visit("/")
   sign_in_and_play
   expect(page).to have_content "Hitpoints: 100"
+  click_button "Attack"
   end 
 end 
