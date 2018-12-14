@@ -16,8 +16,6 @@ enable :sessions
   get '/play' do
     @player_1 = $player_1
     @player_2 = $player_2
-    p @player_1
-    p @player_2
     erb :play
   end
 
